@@ -8,7 +8,7 @@ exports.gtmDiagnostic = async (req, res, next) => {
   const data = req.body;
   console.log("Data", data);
   try {
-    const doc = new Gtm({ ...data });
+    const doc = new Gtm({ dataLayerData: data });
     await doc.save();
   } catch (err) {
     console.log(err);
