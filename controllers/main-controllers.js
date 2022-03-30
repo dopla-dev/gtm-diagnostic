@@ -6,9 +6,9 @@ const Gtm = require("../models/gtm");
 exports.gtmDiagnostic = async (req, res, next) => {
   console.log("Receiving GTM diagnostic data");
   const data = req.body;
-
+  console.log("Data", data);
   try {
-    const doc = new Gtm(data);
+    const doc = new Gtm({ ...data });
     await doc.save();
   } catch (err) {
     console.log(err);
