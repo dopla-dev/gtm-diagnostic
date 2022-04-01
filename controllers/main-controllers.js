@@ -1,5 +1,3 @@
-const mongoose = require("mongoose");
-
 const HttpError = require("../models/http-error");
 const Gtm = require("../models/gtm");
 
